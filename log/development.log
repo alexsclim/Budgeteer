@@ -10,3 +10,22 @@ Started GET "/" for 127.0.0.1 at 2016-01-10 12:32:46 -0800
 Processing by Rails::WelcomeController#index as HTML
   Rendered /home/alexsclim/.rbenv/versions/2.1.3/lib/ruby/gems/2.1.0/gems/railties-4.2.2/lib/rails/templates/rails/welcome/index.html.erb (0.0ms)
 Completed 200 OK in 2ms (Views: 0.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2016-01-10 12:42:05 -0800
+
+SyntaxError (/home/alexsclim/Projects/Budgeteer/app/controllers/application_controller.rb:8: syntax error, unexpected end-of-input, expecting keyword_end):
+  app/controllers/application_controller.rb:8: syntax error, unexpected end-of-input, expecting keyword_end
+
+
+  Rendered /home/alexsclim/.rbenv/versions/2.1.3/lib/ruby/gems/2.1.0/gems/web-console-2.0.0.beta3/lib/action_dispatch/templates/rescues/_source.erb (3.9ms)
+  Rendered /home/alexsclim/.rbenv/versions/2.1.3/lib/ruby/gems/2.1.0/gems/web-console-2.0.0.beta3/lib/action_dispatch/templates/rescues/_trace.html.erb (2.7ms)
+  Rendered /home/alexsclim/.rbenv/versions/2.1.3/lib/ruby/gems/2.1.0/gems/web-console-2.0.0.beta3/lib/action_dispatch/templates/rescues/_request_and_response.html.erb (11.8ms)
+  Rendered /home/alexsclim/.rbenv/versions/2.1.3/lib/ruby/gems/2.1.0/gems/web-console-2.0.0.beta3/lib/action_dispatch/templates/rescues/_web_console.html.erb (1.0ms)
+  Rendered /home/alexsclim/.rbenv/versions/2.1.3/lib/ruby/gems/2.1.0/gems/web-console-2.0.0.beta3/lib/action_dispatch/templates/rescues/diagnostics.html.erb within rescues/layout (37.8ms)
+
+
+Started GET "/" for 127.0.0.1 at 2016-01-10 12:42:16 -0800
+Processing by ApplicationController#hello as HTML
+  Rendered text template (0.0ms)
+Completed 200 OK in 16ms (Views: 14.4ms | ActiveRecord: 0.0ms)
