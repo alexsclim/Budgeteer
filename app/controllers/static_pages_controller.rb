@@ -5,6 +5,9 @@ class StaticPagesController < ApplicationController
   def settings
   end
 
-  def budget
+  def budgets
+  end
+
+  def contact
   end
 end
