@@ -14,8 +14,14 @@ class StaticPagesControllerTest < ActionController::TestCase
   end
 
   test "should get budget" do
-    get :budget
+    get :budgets
     assert_response :success
     assert_select "title", "Budgets | Budgeteer"
+  end
+
+  test "should get contact" do
+    get :contact
+    assert_response :success
+    assert_select "title", "Contact | Budgeteer"
   end
 end
