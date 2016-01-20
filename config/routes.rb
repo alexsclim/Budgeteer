@@ -4,4 +4,5 @@ Rails.application.routes.draw do
   get 'budgets'  => 'static_pages#budgets'
   get 'contact'  => 'static_pages#contact'
   get 'signup'   => 'users#new'
+  resources :users
 end
