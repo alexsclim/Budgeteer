@@ -1,4 +1,4 @@
 Budgeteer
 
 Your own personal budgeter
-https://lite-snow-budgeteer.herokuapp.com/
+https://matcha-lite-budgeteer.herokuapp.com/
