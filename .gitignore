@@ -1,4 +1,2 @@
-/log/development.log
-/tmp/.
-/log/.
-/db/.
+/tmp
+/log
