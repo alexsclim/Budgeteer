@@ -1,131 +1,130 @@
-<% unless user_signed_in? %>
-    <!-- Header Carousel -->
-    <header id="myCarousel" class="carousel slide">
-        <!-- Indicators -->
-        <ol class="carousel-indicators">
-            <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
-            <li data-target="#myCarousel" data-slide-to="1"></li>
-            <li data-target="#myCarousel" data-slide-to="2"></li>
-        </ol>
+<!-- Header Carousel -->
+<header id="myCarousel" class="carousel slide">
+    <!-- Indicators -->
+    <ol class="carousel-indicators">
+        <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+        <li data-target="#myCarousel" data-slide-to="1"></li>
+        <li data-target="#myCarousel" data-slide-to="2"></li>
+    </ol>
 
-        <!-- Wrapper for slides -->
-        <div class="carousel-inner">
-            <div class="item active">
-                <div class="fill" style="background-image:url(<%= asset_path 'laptop.jpg' %>);"></div>
-                <div class="carousel-caption">
-                    <h2>View your past trends</h2>
-                </div>
-            </div>
-            <div class="item">
-                <div class="fill" style="background-image:url(<%= asset_path 'calculator-money.jpg' %>);"></div>
-                <div class="carousel-caption">
-                    <h2>Set reachable goals</h2>
-                </div>
-            </div>
-            <div class="item">
-                <div class="fill" style="background-image:url(<%= asset_path 'analytics.jpg' %>);"></div>
-                <div class="carousel-caption">
-                    <h2>Track your finances</h2>
-                </div>
+    <!-- Wrapper for slides -->
+    <div class="carousel-inner">
+        <div class="item active">
+            <div class="fill" style="background-image:url(<%= asset_path 'laptop.jpg' %>);"></div>
+            <div class="carousel-caption">
+                <h2>View your past trends</h2>
             </div>
         </div>
-
-        <!-- Controls -->
-        <a class="left carousel-control" href="#myCarousel" data-slide="prev">
-            <span class="icon-prev"></span>
-        </a>
-        <a class="right carousel-control" href="#myCarousel" data-slide="next">
-            <span class="icon-next"></span>
-        </a>
-    </header>
-
-    <!-- Page Content -->
-    <div class="container">
-
-        <!-- Marketing Icons Section -->
-        <div class="row">
-            <div class="col-lg-12">
-                <h1 class="page-header text-center">
-                    Welcome to Budgeteer!
-                </h1>
-            </div>
-            <div class="col-md-4">
-                <div class="panel panel-info">
-                    <div class="panel-heading">
-                        <h4><i class="fa fa-fw fa-check"></i> Free for everybody!</h4>
-                    </div>
-                    <div class="panel-body">
-                        <p>Free for everybody, do not pay as much as a single dollar to use it. </p>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-4">
-                <div class="panel panel-info">
-                    <div class="panel-heading">
-                        <h4><i class="fa fa-fw fa-gift"></i> Responsive design</h4>
-                    </div>
-                    <div class="panel-body">
-                        <p>Works nicely and responds well on both web and mobile browsers .</p>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-4">
-                <div class="panel panel-info">
-                    <div class="panel-heading">
-                        <h4><i class="fa fa-fw fa-compass"></i> Easy to Use</h4>
-                    </div>
-                    <div class="panel-body">
-                        <p>Simple, easy to use and comes packed with just the right amount of features. </p>
-                    </div>
-                </div>
+        <div class="item">
+            <div class="fill" style="background-image:url(<%= asset_path 'calculator-money.jpg' %>);"></div>
+            <div class="carousel-caption">
+                <h2>Set reachable goals</h2>
             </div>
         </div>
-
-        <!-- Features Section -->
-        <div class="row">
-            <div class="col-lg-12">
-                <h2 class="page-header">Features</h2>
-            </div>
-            <div class="col-md-6">
-                <p>With Budgeteer you can:</p>
-                <ul>
-                    <li>Set goals for every month</li>
-                    <li>Allocate your funds to different categories</li>
-                    <li>View your past spending trends</li>
-                    <li>Track your savings</li>
-                    <li>View analytics and graphs of your data</li>
-                </ul>
-                <h4>Budgeteer is a free budgeting app that allows you to manage your finances, set goals and keep track of your spending</h4>
-            </div>
-            <div class="col-md-6">
-                <img class="img-responsive" src="http://placehold.it/700x450" alt="">
+        <div class="item">
+            <div class="fill" style="background-image:url(<%= asset_path 'analytics.jpg' %>);"></div>
+            <div class="carousel-caption">
+                <h2>Track your finances</h2>
             </div>
         </div>
-        <!-- /.row -->
-
-        <hr>
-
-        <!-- Call to Action Section -->
-        <div class="well">
-            <div class="row">
-                <div class="col-md-6 text-center">
-                    <h4>Sign up for Budgeteer! </h4>
-                </div>
-                <div class="col-md-6">
-                    <%= link_to 'Sign up', new_user_registration_path, class: 'btn btn-info btn-block' %>
-                </div>
-            </div>
-        </div>
-
     </div>
-    <!-- /.container -->
 
-    <!-- Script to Activate the Carousel -->
-    <script>
-    $(document).on('ready', function () {
-      $('.carousel').carousel({
-          interval: 3000 //changes the speed
-      })
-    });
-    </script>
-<% end %>
+    <!-- Controls -->
+    <a class="left carousel-control" href="#myCarousel" data-slide="prev">
+        <span class="icon-prev"></span>
+    </a>
+    <a class="right carousel-control" href="#myCarousel" data-slide="next">
+        <span class="icon-next"></span>
+    </a>
+</header>
+
+<!-- Page Content -->
+<div class="container">
+
+    <!-- Marketing Icons Section -->
+    <div class="row">
+        <div class="col-lg-12">
+            <h1 class="page-header text-center">
+                Welcome to Budgeteer!
+            </h1>
+        </div>
+        <div class="col-md-4">
+            <div class="panel panel-info">
+                <div class="panel-heading">
+                    <h4><i class="fa fa-fw fa-check"></i> Free for everybody!</h4>
+                </div>
+                <div class="panel-body">
+                    <p>Free for everybody, do not pay as much as a single dollar to use it. </p>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="panel panel-info">
+                <div class="panel-heading">
+                    <h4><i class="fa fa-fw fa-gift"></i> Responsive design</h4>
+                </div>
+                <div class="panel-body">
+                    <p>Works nicely and responds well on both web and mobile browsers .</p>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="panel panel-info">
+                <div class="panel-heading">
+                    <h4><i class="fa fa-fw fa-compass"></i> Easy to Use</h4>
+                </div>
+                <div class="panel-body">
+                    <p>Simple, easy to use and comes packed with just the right amount of features. </p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Features Section -->
+    <div class="row">
+        <div class="col-lg-12">
+            <h2 class="page-header">Features</h2>
+        </div>
+        <div class="col-md-6">
+            <p>With Budgeteer you can:</p>
+            <ul>
+                <li>Set goals for every month</li>
+                <li>Allocate your funds to different categories</li>
+                <li>View your past spending trends</li>
+                <li>Track your savings</li>
+                <li>View analytics and graphs of your data</li>
+            </ul>
+            <h4>Budgeteer is a free budgeting app that allows you to manage your finances, set goals and keep track of your spending</h4>
+        </div>
+        <div class="col-md-6">
+            <img class="img-responsive" src="http://placehold.it/700x450" alt="">
+        </div>
+    </div>
+    <!-- /.row -->
+
+    <hr>
+
+    <!-- Call to Action Section -->
+    <div class="well">
+        <div class="row">
+            <div class="col-md-6 text-center">
+                <h4>Sign up for Budgeteer! </h4>
+            </div>
+            <div class="col-md-6">
+                <%= link_to 'Sign up', new_user_registration_path, class: 'btn btn-info btn-block' %>
+            </div>
+        </div>
+    </div>
+
+</div>
+<!-- /.container -->
+
+<!-- Script to Activate the Carousel -->
+<script>
+$(document).on('ready', function () {
+  $('.carousel').carousel({
+      interval: 3000 //changes the speed
+  })
+});
+</script>
+
