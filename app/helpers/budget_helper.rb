@@ -25,4 +25,10 @@ module BudgetHelper
       balance - total_spent_balance
     end
   end
+
+  def get_categories(attributes)
+    allocated = attributes.select{ |key, value| key.to_s.match(/^allocated+/) }
+    spent = attributes.select{ |key, value| key.to_s.match(/^spent+/) }
+    categories_hash = allocated.merge(spent)
+  end
 end

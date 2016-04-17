@@ -7,4 +7,6 @@ Rails.application.routes.draw do
   devise_for :users
   resources :budgets
   resources :users
+
+  get 'contact', to: 'static_pages#contact'
 end
