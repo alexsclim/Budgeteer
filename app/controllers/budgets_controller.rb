@@ -2,7 +2,7 @@ class BudgetsController < ApplicationController
   before_action :authenticate_user!
 
   def index
-    @budgets = Budget.all
+    @budgets = current_user.budgets.all
     @user = current_user
   end
 
@@ -23,14 +23,33 @@ class BudgetsController < ApplicationController
     @budget = Budget.find(params[:id])
   end
 
+  def edit
+    @budget = Budget.find(params[:id])
+  end
+
+  def update
+    @budget = Budget.find(params[:id])
+    if @budget.update_attributes(budget_params)
+      redirect_to budget_path(@budget)
+    else
+      render 'edit'
+    end
+  end
+
+  def destroy
+    Budget.find(params[:id]).destroy
+    flash[:success] = 'Budget deleted'
+    redirect_to root_path
+  end
+
   private
 
   def budget_params
     params.require(:budget).permit(:allocated_food, :allocated_housing, :allocated_utilities,
                                    :allocated_transportation, :allocated_health, :allocated_clothing,
                                    :allocated_education, :allocated_fitness, :allocated_electronics,
-                                   :allocated_other, :food, :housing, :utilities, :transportation,
-                                   :health, :clothing, :education, :fitness, :electronics, :other, :start_date,
+                                   :allocated_other, :spent_food, :spent_housing, :spent_utilities, :spent_transportation,
+                                   :spent_health, :spent_clothing, :spent_education, :spent_fitness, :spent_electronics, :spent_other, :start_date,
                                    :end_date)
   end
 

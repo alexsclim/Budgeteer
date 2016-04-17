@@ -1,11 +1,11 @@
 <h3><b>How much you spent in each category so far:</b></h3>
-<%= f.input :food, input_html: { value: '0' } %>
-<%= f.input :housing, input_html: { value: '0' } %>
-<%= f.input :utilities, input_html: { value: '0' } %>
-<%= f.input :transportation, input_html: { value: '0' } %>
-<%= f.input :health, input_html: { value: '0' } %>
-<%= f.input :clothing, input_html: { value: '0' } %>
-<%= f.input :education, input_html: { value: '0' } %>
-<%= f.input :fitness, input_html: { value: '0' } %>
-<%= f.input :electronics, input_html: { value: '0' } %>
-<%= f.input :other, input_html: { value: '0' } %>
+<%= f.input :spent_food, input_html: { value: f.object.spent_food || '0' } %>
+<%= f.input :spent_housing, input_html: { value: f.object.spent_housing || '0' } %>
+<%= f.input :spent_utilities, input_html: { value: f.object.spent_utilities || '0' } %>
+<%= f.input :spent_transportation, input_html: { value: f.object.spent_transportation || '0' } %>
+<%= f.input :spent_health, input_html: { value: f.object.spent_health || '0' } %>
+<%= f.input :spent_clothing, input_html: { value: f.object.spent_clothing || '0' } %>
+<%= f.input :spent_education, input_html: { value: f.object.spent_education || '0' } %>
+<%= f.input :spent_fitness, input_html: { value: f.object.spent_fitness || '0' } %>
+<%= f.input :spent_electronics, input_html: { value: f.object.spent_electronics || '0' } %>
+<%= f.input :spent_other, input_html: { value: f.object.spent_other || '0' } %>

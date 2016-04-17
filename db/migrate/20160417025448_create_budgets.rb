@@ -1,21 +1,20 @@
 class CreateBudgets < ActiveRecord::Migration
   def change
     create_table :budgets do |t|
-      t.string :title
-      t.decimal :balance
+      t.decimal :spent_balance
       t.decimal :allocated_balance
       t.date :start_date
       t.date :end_date
-      t.decimal :food
-      t.decimal :housing
-      t.decimal :utilities
-      t.decimal :transportation
-      t.decimal :health
-      t.decimal :clothing
-      t.decimal :education
-      t.decimal :fitness
-      t.decimal :electronics
-      t.decimal :other
+      t.decimal :spent_food
+      t.decimal :spent_housing
+      t.decimal :spent_utilities
+      t.decimal :spent_transportation
+      t.decimal :spent_health
+      t.decimal :spent_clothing
+      t.decimal :spent_education
+      t.decimal :spent_fitness
+      t.decimal :spent_electronics
+      t.decimal :spent_other
       t.decimal :allocated_food
       t.decimal :allocated_housing
       t.decimal :allocated_utilities

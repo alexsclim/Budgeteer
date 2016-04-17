@@ -15,6 +15,7 @@ gem 'sendgrid'
 gem 'simple_form'
 gem 'chartkick'
 gem 'groupdate'
+gem "highcharts-rails"
 group :development, :test do
   gem 'byebug'
 end

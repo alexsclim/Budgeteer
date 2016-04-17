@@ -3,9 +3,9 @@
     <div class='col-md-4'></div>
     <div class='col-md-4 text-center'>
       <h3>Keep track of your bank account balance</h3>
-      <p>Add to your current balance of: </p>
+      <p>Add to your current balance of: <%= number_to_currency user_balance(@user.balance) %> </p>
       <%= simple_form_for @user do |f| %>
-        <%= f.input :balance %>
+        <%= f.input :balance, input_html: {value: '0'} %>
         <%= f.submit 'Add', class: 'btn btn-info' %>
       <% end %>
     </div>

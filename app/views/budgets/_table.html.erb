@@ -1,0 +1,135 @@
+<div class='panel panel-info'>
+  <table class='table table-striped'>
+    <thead>
+      <tr>
+        <th class='text-center'>Category</th>
+        <th class='text-center'>Allocated amount</th>
+        <th class='text-center'>Amount Spent</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>
+          Food
+        </td>
+        <td>
+          <%= number_to_currency @budget.allocated_food %>
+        </td>
+        <td>
+          <%= number_to_currency @budget.spent_food %>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          Housing
+        </td>
+        <td>
+          <%= number_to_currency @budget.allocated_housing %>
+        </td>
+        <td>
+          <%= number_to_currency @budget.spent_housing %>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          Utilities
+        </td>
+        <td>
+          <%= number_to_currency @budget.allocated_utilities %>
+        </td>
+        <td>
+          <%= number_to_currency @budget.spent_utilities %>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          Transportation
+        </td>
+        <td>
+          <%= number_to_currency @budget.allocated_transportation %>
+        </td>
+        <td>
+          <%= number_to_currency @budget.spent_transportation %>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          Health
+        </td>
+        <td>
+          <%= number_to_currency @budget.allocated_health %>
+        </td>
+        <td>
+          <%= number_to_currency @budget.spent_health %>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          Clothing
+        </td>
+        <td>
+          <%= number_to_currency @budget.allocated_clothing %>
+        </td>
+        <td>
+          <%= number_to_currency @budget.spent_clothing %>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          Education
+        </td>
+        <td>
+          <%= number_to_currency @budget.allocated_education %>
+        </td>
+        <td>
+          <%= number_to_currency @budget.spent_education %>
+        </td>
+
+      </tr>
+      <tr>
+        <td>
+          Fitness
+        </td>
+        <td>
+          <%= number_to_currency @budget.allocated_fitness %>
+        </td>
+        <td>
+          <%= number_to_currency @budget.spent_fitness %>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          Electronics
+        </td>
+        <td>
+          <%= number_to_currency @budget.allocated_electronics %>
+        </td>
+        <td>
+          <%= number_to_currency @budget.spent_electronics %>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          Other
+        </td>
+        <td>
+          <%= number_to_currency @budget.allocated_other %>
+        </td>
+        <td>
+          <%= number_to_currency @budget.spent_other %>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <b>Total</b>
+        </td>
+        <td>
+          <%= number_to_currency allocated_balance(@budget.attributes) %>
+        </td>
+        <td>
+          <%= number_to_currency real_balance(@budget.attributes) %>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>

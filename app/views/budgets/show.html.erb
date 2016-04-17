@@ -1,0 +1,18 @@
+<div class='container-fluid'>
+  <div class='row text-center'>
+    <h3>
+      <%= @budget.start_date.to_formatted_s(:long) %> to
+      <%= @budget.end_date.to_formatted_s(:long) %>
+      </h3>
+    <div class='col-md-2'></div>
+      <div class='col-md-8'>
+        <%= link_to 'Edit', edit_budget_path(@budget), class: 'btn btn-info' %>
+        <%= link_to 'Delete', @budget, method: :delete, data: { confirm: 'Are you sure?' }, class: 'btn btn-danger' %>
+        <h3>Budget Data</h3>
+        <%= render partial: 'table' %>
+        <h3>Distribution of allocated funds</h3>
+        <%= pie_chart(allocated_hash @budget.attributes) %>
+      </div>
+    <div class='col-md-2'></div>
+  </div>
+</div>
