@@ -1,0 +1,17 @@
+<div class='container-fluid'>
+  <div class='row'>
+    <div class='col-md-3'>
+      <div class='panel panel-info block-spacing margin-vert-small'>
+        <div class='panel-heading text-center'>Budgets</div>
+        <div class='panel-description text-center'>
+          <%= link_to 'Add new budget', new_budget_path, class: 'btn btn-info block-spacing margin-vert-small' %>
+        </div>
+        <ul class='list-group'>
+          <%= render partial: 'budget', collection: @budgets %>
+        </ul>
+      </div>
+    </div>
+    <div class='col-md-9'>
+    </div>
+  </div>
+</div>
