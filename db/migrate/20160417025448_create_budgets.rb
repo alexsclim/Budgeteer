@@ -26,7 +26,9 @@ class CreateBudgets < ActiveRecord::Migration
       t.decimal :allocated_fitness
       t.decimal :allocated_electronics
       t.decimal :allocated_other
+      t.integer :user_id
       t.timestamps null: false
     end
+    add_index :budgets, [:user_id, :created_at]
   end
 end

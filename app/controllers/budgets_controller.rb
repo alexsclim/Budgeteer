@@ -3,6 +3,7 @@ class BudgetsController < ApplicationController
 
   def index
     @budgets = Budget.all
+    @user = current_user
   end
 
   def new
@@ -10,7 +11,7 @@ class BudgetsController < ApplicationController
   end
 
   def create
-    @budget = Budget.new(budget_params)
+    @budget = current_user.budgets.build(budget_params)
     if @budget.save
       redirect_to root_path
     else

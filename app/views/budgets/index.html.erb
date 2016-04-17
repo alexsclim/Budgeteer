@@ -1,9 +1,9 @@
 <div class='container-fluid'>
-  <div class='row'>
+  <div class='row text-center'>
     <div class='col-md-3'>
-      <div class='panel panel-info block-spacing margin-vert-small'>
-        <div class='panel-heading text-center'>Budgets</div>
-        <div class='panel-description text-center'>
+      <div class='panel panel-info block-spacing margin-vert-small fixed-panel'>
+        <div class='panel-heading'>Budgets</div>
+        <div class='panel-description'>
           <%= link_to 'Add new budget', new_budget_path, class: 'btn btn-info block-spacing margin-vert-small' %>
         </div>
         <ul class='list-group'>
@@ -12,6 +12,13 @@
       </div>
     </div>
     <div class='col-md-9'>
+      <h3>Total Account Balance:
+      <%= number_to_currency(@user.balance) %></h3>
+      <%= link_to 'Update account balance', edit_user_path(@user), class: 'btn btn-info' %>
+      <h3>Number of created budgets in the past month</h3>
+      <%= line_chart Budget.group_by_month(:created_at, range: 1.month.ago..Time.now).count %>
+      <h3>Number of created budgets in the past year</h3>
+      <%= column_chart Budget.group_by_month(:created_at, range: 12.month.ago..Time.now).count %>
     </div>
   </div>
 </div>

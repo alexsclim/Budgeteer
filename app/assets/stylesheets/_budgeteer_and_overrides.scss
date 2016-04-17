@@ -13,3 +13,26 @@
   color: #fff;
   text-decoration: none;
 }
+
+@media only screen and (min-width: 400px) {
+
+  .fixed-panel {
+    min-height: 800px;
+    max-height: 800px;
+    overflow-y: scroll;
+  }
+
+}
+
+
+@media only screen and (max-width: 400px) {
+
+  .fixed-panel {
+    min-height: 400px;
+    max-height: 400px;
+    overflow-y: scroll;
+  }
+
+}
+
+

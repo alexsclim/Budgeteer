@@ -13,6 +13,8 @@ gem 'high_voltage'
 gem 'pg'
 gem 'sendgrid'
 gem 'simple_form'
+gem 'chartkick'
+gem 'groupdate'
 group :development, :test do
   gem 'byebug'
 end

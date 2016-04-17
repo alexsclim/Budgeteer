@@ -4,7 +4,7 @@ class Budget < ActiveRecord::Base
   validates :allocated_food, :allocated_housing, :allocated_utilities,
             :allocated_transportation, :allocated_health, :allocated_clothing,
             :allocated_education, :allocated_fitness, :allocated_electronics,
-            :allocated_other, presence: true
+            :allocated_other, :user_id, presence: true
 
   ALLOCATED_CATEGORIES = [
     :allocated_food, :allocated_housing, :allocated_utilities, :allocated_transportation,

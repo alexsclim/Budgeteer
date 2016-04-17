@@ -1,0 +1,14 @@
+<div class='container-fluid'>
+  <div class='row'>
+    <div class='col-md-4'></div>
+    <div class='col-md-4 text-center'>
+      <h3>Keep track of your bank account balance</h3>
+      <p>Add to your current balance of: </p>
+      <%= simple_form_for @user do |f| %>
+        <%= f.input :balance %>
+        <%= f.submit 'Add', class: 'btn btn-info' %>
+      <% end %>
+    </div>
+    <div class='col-md-4'></div>
+  </div>
+</div>

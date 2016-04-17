@@ -42,9 +42,12 @@ ActiveRecord::Schema.define(version: 20160417025448) do
     t.decimal  "allocated_fitness"
     t.decimal  "allocated_electronics"
     t.decimal  "allocated_other"
+    t.integer  "user_id"
     t.datetime "created_at",               null: false
     t.datetime "updated_at",               null: false
   end
+
+  add_index "budgets", ["user_id", "created_at"], name: "index_budgets_on_user_id_and_created_at", using: :btree
 
   create_table "users", force: :cascade do |t|
     t.string   "email",                  default: "", null: false
